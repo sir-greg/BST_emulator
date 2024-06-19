@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1566</width>
+    <height>795</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="InsertValueButton">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>20</y>
+      <width>331</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Insert value</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="ValueInputLineEdit">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>60</y>
+      <width>331</width>
+      <height>25</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="InsertRandomButton">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>140</y>
+      <width>331</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Insert a lot of 
+random values (Input the number of elements)</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="NumberOfRandomElementsLineEdit">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>210</y>
+      <width>331</width>
+      <height>25</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="RemoveElementButton">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>290</y>
+      <width>331</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Remove an element by value</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="RemoveValueLineEdit">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>330</y>
+      <width>331</width>
+      <height>25</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="ClickNodeLabel">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>370</y>
+      <width>271</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>(Or by double-clicking on the node)</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="clearTreeButton">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>430</y>
+      <width>331</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Clear tree</string>
+    </property>
+   </widget>
+   <widget class="QGraphicsView" name="BST_GraphicsView">
+    <property name="geometry">
+     <rect>
+      <x>390</x>
+      <y>20</y>
+      <width>1111</width>
+      <height>711</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QSplitter" name="splitter">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>497</y>
+      <width>331</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Vertical</enum>
+    </property>
+    <widget class="QLabel" name="label">
+     <property name="text">
+      <string>Scope</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QSlider" name="ScopeSlider">
+     <property name="minimum">
+      <number>1</number>
+     </property>
+     <property name="maximum">
+      <number>32</number>
+     </property>
+     <property name="value">
+      <number>10</number>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QLabel" name="CurrentTreeModeLabel">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>630</y>
+      <width>321</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 700 12pt &quot;Segoe UI&quot;;
+background-color: rgb(255, 255, 255);
+
+</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::WinPanel</enum>
+    </property>
+    <property name="text">
+     <string>AVL Tree</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1566</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="ChooseTreeMenu">
+    <property name="title">
+     <string>Choose Tree</string>
+    </property>
+    <addaction name="setAVL"/>
+    <addaction name="setRed_Black"/>
+    <addaction name="setSplay"/>
+    <addaction name="setTreap"/>
+   </widget>
+   <addaction name="ChooseTreeMenu"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="setAVL">
+   <property name="text">
+    <string>AVL tree</string>
+   </property>
+  </action>
+  <action name="setRed_Black">
+   <property name="text">
+    <string>Red-Black tree</string>
+   </property>
+  </action>
+  <action name="setSplay">
+   <property name="text">
+    <string>Splay tree</string>
+   </property>
+  </action>
+  <action name="setTreap">
+   <property name="text">
+    <string>Cartesian tree</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
